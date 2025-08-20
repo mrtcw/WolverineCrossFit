@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wolverine CrossFit — Book Your First Class</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">W</span>olverine <span class="accent">CrossFit</span>
+      </a>
+      <button id="menuToggle" class="menu-toggle" aria-label="Open Menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="book.html">Book Class</a></li>
+          <li><a href="gallery.html#cart" class="cart-link">Cart (<span id="cartCount">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+    <nav id="mobileNav" class="mobile-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="book.html">Book Class</a></li>
+        <li><a href="gallery.html#cart">Cart (<span class="cartCountDup">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main" class="container">
+    <h1>Book Your First Class</h1>
+    <form id="bookingForm" novalidate>
+      <label for="classType">Class Type</label>
+      <select id="classType" name="classType" required aria-required="true">
+        <option value="">Select a class</option>
+        <option>WOD</option>
+        <option>Strength</option>
+        <option>Endurance</option>
+      </select>
+
+      <label for="date">Date</label>
+      <input id="date" name="date" type="date" required aria-required="true" />
+
+      <label for="time">Time</label>
+      <input id="time" name="time" type="time" required aria-required="true" />
+
+      <label for="bname">Your Name</label>
+      <input id="bname" name="bname" required aria-required="true" />
+
+      <label for="bemail">Your Email</label>
+      <input id="bemail" name="bemail" type="email" required aria-required="true" />
+
+      <button type="submit" class="btn btn-cta">Book Class</button>
+      <p id="bookingMessage" class="form-message" role="alert" aria-live="polite"></p>
+    </form>
+
+    <section>
+      <h2>Current Session Bookings (SessionStorage)</h2>
+      <pre id="sessionDataView" class="codebox" aria-live="polite"></pre>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Wolverine CrossFit — Train Like a Wolverine</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

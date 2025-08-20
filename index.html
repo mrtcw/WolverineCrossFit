@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wolverine CrossFit — Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">W</span>olverine <span class="accent">CrossFit</span>
+      </a>
+      <button id="menuToggle" class="menu-toggle" aria-label="Open Menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="book.html">Book Class</a></li>
+          <li><a href="gallery.html#cart" class="cart-link">Cart (<span id="cartCount">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+    <nav id="mobileNav" class="mobile-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="book.html">Book Class</a></li>
+        <li><a href="gallery.html#cart">Cart (<span class="cartCountDup">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main" class="container">
+    <section class="hero" role="banner" aria-label="Hero">
+      <div class="hero-text">
+        <h1>Train Like a Wolverine</h1>
+        <p>High-intensity CrossFit classes, strength conditioning, and nutrition coaching.</p>
+        <a class="btn btn-cta" href="book.html">Book Your First Class</a>
+      </div>
+      <div class="hero-img placeholder" aria-hidden="true"></div>
+    </section>
+
+    <section class="intro">
+      <h2>Welcome to Wolverine CrossFit</h2>
+      <p>Join a supportive community and push your limits with guided programming from certified coaches.</p>
+    </section>
+
+    <section class="features">
+      <article class="card">
+        <div class="img placeholder" aria-hidden="true"></div>
+        <h3>WOD Classes</h3>
+        <p>Daily programming with strength and metcon components.</p>
+      </article>
+      <article class="card">
+        <div class="img placeholder" aria-hidden="true"></div>
+        <h3>Personal Training</h3>
+        <p>1:1 coaching tailored to your goals and schedule.</p>
+      </article>
+      <article class="card">
+        <div class="img placeholder" aria-hidden="true"></div>
+        <h3>Nutrition</h3>
+        <p>Performance nutrition guidance for results inside and outside the gym.</p>
+      </article>
+    </section>
+
+    <section class="subscribe">
+      <h2>Subscribe for Updates</h2>
+      <form id="subscribeForm" novalidate>
+        <label for="subEmail">Email</label>
+        <input id="subEmail" name="email" type="email" placeholder="you@example.com" required aria-required="true" />
+        <button type="submit" class="btn">Subscribe</button>
+        <p id="subMessage" class="form-message" role="alert" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Wolverine CrossFit — Train Like a Wolverine</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

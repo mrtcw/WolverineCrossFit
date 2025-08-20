@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wolverine CrossFit — Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">W</span>olverine <span class="accent">CrossFit</span>
+      </a>
+      <button id="menuToggle" class="menu-toggle" aria-label="Open Menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="book.html">Book Class</a></li>
+          <li><a href="gallery.html#cart" class="cart-link">Cart (<span id="cartCount">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+    <nav id="mobileNav" class="mobile-nav" aria-label="Mobile">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="book.html">Book Class</a></li>
+        <li><a href="gallery.html#cart">Cart (<span class="cartCountDup">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main" class="container">
+    <h1>Gallery & Passes</h1>
+
+    <section class="gallery-grid">
+      <div class="placeholder" aria-hidden="true"></div>
+      <div class="placeholder" aria-hidden="true"></div>
+      <div class="placeholder" aria-hidden="true"></div>
+      <div class="placeholder" aria-hidden="true"></div>
+      <div class="placeholder" aria-hidden="true"></div>
+      <div class="placeholder" aria-hidden="true"></div>
+      <div class="placeholder" aria-hidden="true"></div>
+      <div class="placeholder" aria-hidden="true"></div>
+    </section>
+
+    <section class="products">
+      <h2>Class Passes & Memberships</h2>
+      <div class="product-grid">
+        <article class="product" data-id="p1" data-name="Drop-In Class" data-price="20">
+          <div class="img placeholder" aria-hidden="true"></div>
+          <h3>Drop-In Class</h3>
+          <p class="price">$20</p>
+          <button class="btn addToCart">Add to Cart</button>
+        </article>
+        <article class="product" data-id="p2" data-name="5-Class Pack" data-price="90">
+          <div class="img placeholder" aria-hidden="true"></div>
+          <h3>5-Class Pack</h3>
+          <p class="price">$90</p>
+          <button class="btn addToCart">Add to Cart</button>
+        </article>
+        <article class="product" data-id="p3" data-name="Unlimited Month" data-price="150">
+          <div class="img placeholder" aria-hidden="true"></div>
+          <h3>Unlimited Month</h3>
+          <p class="price">$150</p>
+          <button class="btn addToCart">Add to Cart</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="cart" class="cart">
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <div class="cart-actions">
+        <button id="processOrder" class="btn btn-cta">Process Order</button>
+        <button id="clearCart" class="btn btn-danger">Clear Cart</button>
+      </div>
+      <p id="cartMessage" class="form-message" role="alert" aria-live="polite"></p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Wolverine CrossFit — Train Like a Wolverine</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
